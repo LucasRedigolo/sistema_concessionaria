@@ -6,7 +6,8 @@ namespace sistema_concessionaria
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Cliente c1 = new Cliente();
+            c1.CadastrarCliente();
         }
     }
 }
