@@ -31,17 +31,19 @@ public class Carro
         Application ex = new Application();
         ex.DisplayAlerts = false;
         ex.Workbooks.Add();
-        int contador = 0;
+        int cont = 0;
 
         do
         {
-            contador += 1;
-        } while (ex.Cells[contador, 1].Value != null);
-
+            cont += 1;
+        } while (ex.Cells[cont, 1].Value != null); //verifica se a linha ta vazia para incluir os dados
+        
+       // incluir aquele famoso if pro cabeçalho pra não incluir toda hora 
         ex.Cells[1, 1].Value = "Carro";
         ex.Cells[1, 2].Value = "Ano de fabricacao";
         ex.Cells[1, 3].Value = "Cor";
         ex.Cells[1, 4].Value = "Preco";
+        ex.Cells[1, 5].Value = "Vendido";
         ex.Cells[2, 1].Value = Modelo;
         ex.Cells[2, 2].Value = Ano;
         ex.Cells[2, 3].Value = Cor;
