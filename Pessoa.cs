@@ -28,7 +28,15 @@ public class Pessoa
                 e.CadastrarEndereco();
 
                 Application ex = new Application();
+                ex.DisplayAlerts = false;
                 ex.Workbooks.Add();
+                int contador = 0;
+
+                do
+                {
+                    contador += 1;
+                } while (ex.Cells[contador, 1].Value != null);
+
                 ex.Cells[1, 1].Value = "Nome";
                 ex.Cells[1, 2].Value = "Idade";
                 ex.Cells[1, 3].Value = "CPF";
@@ -43,10 +51,10 @@ public class Pessoa
                 ex.Quit();
                 ex.Dispose();
             }
-        }while(cpfvalido == false);
+        } while (cpfvalido == false);
     }
 }
 
-     
+
 
 

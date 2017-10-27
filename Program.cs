@@ -8,6 +8,8 @@ namespace sistema_concessionaria
         {
             Cliente c1 = new Cliente();
             c1.CadastrarCliente();
+            Carro carro = new Carro();
+            carro.CadastroCarro();
         }
     }
 }
